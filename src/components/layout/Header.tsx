@@ -1,10 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-
-// Import the images directly
-import xBitesLogo from '/lovable-uploads/4b2783f5-f780-400c-b004-6a3cedeba5ab.png';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,9 +30,15 @@ const Header = () => {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img 
-              src={xBitesLogo} 
+              src="/xbites-logo.png" 
               alt="xBites Logo" 
               className="h-10" 
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                console.error('xBites logo failed to load');
+                target.onerror = null;
+                target.src = '/placeholder.svg';
+              }}
             />
           </a>
         </div>

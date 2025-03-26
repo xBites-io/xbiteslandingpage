@@ -3,10 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import CTAButton from '../ui/CTAButton';
 import { ArrowRight } from 'lucide-react';
 
-// Import the images directly
-import antlerLogo from '/lovable-uploads/805f68c2-3413-4983-a493-ff615b7dac34.png';
-import dashboardScreenshot from '/lovable-uploads/67f48d38-b9e3-4dfc-8658-886c3e85647f.png';
-
 const Hero = () => {
   const backgroundAnimation = useRef<HTMLDivElement>(null);
   
@@ -77,9 +73,15 @@ const Hero = () => {
               </svg>
               <span>Backed up by</span>
               <img 
-                src={antlerLogo} 
+                src="/antler-logo.png" 
                 alt="Antler" 
                 className="h-6 ml-2" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('Antler logo failed to load');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }}
               />
             </div>
           </div>
@@ -97,9 +99,15 @@ const Hero = () => {
             </div>
             <div className="aspect-video bg-gradient-to-b from-white to-secondary/30 flex items-center justify-center">
               <img 
-                src={dashboardScreenshot} 
+                src="/dashboard-screenshot.png" 
                 alt="Dashboard Preview" 
                 className="w-full h-full object-cover" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('Dashboard screenshot failed to load');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }}
               />
             </div>
           </div>
