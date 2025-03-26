@@ -72,7 +72,17 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <span>Backed up by</span>
-              <img src="/antler-logo.png" alt="Antler" className="h-6 ml-2" />
+              <img 
+                src="/antler-logo.png" 
+                alt="Antler" 
+                className="h-6 ml-2" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('Antler logo failed to load');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }}
+              />
             </div>
           </div>
         </div>
@@ -88,7 +98,17 @@ const Hero = () => {
               </div>
             </div>
             <div className="aspect-video bg-gradient-to-b from-white to-secondary/30 flex items-center justify-center">
-              <img src="/dashboard-screenshot.png" alt="Dashboard Preview" className="w-full h-full object-cover" />
+              <img 
+                src="/dashboard-screenshot.png" 
+                alt="Dashboard Preview" 
+                className="w-full h-full object-cover" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('Dashboard screenshot failed to load');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }}
+              />
             </div>
           </div>
           

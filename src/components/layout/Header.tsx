@@ -29,7 +29,17 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <img src="/xbites-logo.png" alt="xBites Logo" className="h-10" />
+            <img 
+              src="/xbites-logo.png" 
+              alt="xBites Logo" 
+              className="h-10" 
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                console.error('xBites logo failed to load');
+                target.onerror = null;
+                target.src = '/placeholder.svg';
+              }}
+            />
           </a>
         </div>
 

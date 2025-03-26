@@ -13,7 +13,17 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <a href="/" className="inline-block mb-4">
-              <img src="/xbites-logo.png" alt="xBites Logo" className="h-10" />
+              <img 
+                src="/xbites-logo.png" 
+                alt="xBites Logo" 
+                className="h-10" 
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('xBites logo failed to load in footer');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }}
+              />
             </a>
             <p className="text-muted-foreground max-w-md mb-6">
               xBites provides a complete, end-to-end platform with AI agents that automate repetitive sales tasks, optimizing efficiency and enabling teams to focus on closing deals.
