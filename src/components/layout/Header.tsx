@@ -29,9 +29,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <a href="/" className="flex items-center">
-            <span className="text-2xl font-display font-bold text-foreground">
-              X<span className="text-primary">Bites</span>
-            </span>
+            <img src="/xbites-logo.png" alt="xBites Logo" className="h-10" />
           </a>
         </div>
 
@@ -46,17 +44,17 @@ const Header = () => {
           <a href="#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
             Testimonials
           </a>
-          <a href="/about" className="text-foreground/80 hover:text-foreground transition-colors">
-            About
-          </a>
         </nav>
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" className="rounded-full px-5">
+          <Button variant="outline" className="rounded-full px-5" onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}>
             Sign In
           </Button>
-          <Button className="rounded-full px-5 bg-primary text-white hover:bg-primary/90">
+          <Button 
+            className="rounded-full px-5 bg-primary text-white hover:bg-primary/90"
+            onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}
+          >
             Get Started
           </Button>
         </div>
@@ -99,19 +97,19 @@ const Header = () => {
           >
             Testimonials
           </a>
-          <a 
-            href="/about" 
-            className="text-lg font-medium py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            About
-          </a>
         </nav>
         <div className="mt-8 flex flex-col space-y-4">
-          <Button variant="outline" className="w-full rounded-full py-6">
+          <Button 
+            variant="outline" 
+            className="w-full rounded-full py-6"
+            onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}
+          >
             Sign In
           </Button>
-          <Button className="w-full rounded-full py-6 bg-primary text-white">
+          <Button 
+            className="w-full rounded-full py-6 bg-primary text-white"
+            onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}
+          >
             Get Started
           </Button>
         </div>

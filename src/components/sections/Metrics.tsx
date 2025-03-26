@@ -104,6 +104,10 @@ const MetricCard = ({
 };
 
 const Metrics = () => {
+  const handleGetStartedClick = () => {
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+  };
+
   return (
     <section className="section-padding relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -113,21 +117,21 @@ const Metrics = () => {
           </span>
           <h2 className="heading-lg mb-6">Transforming Real Estate Teams</h2>
           <p className="subheading">
-            XBites is delivering measurable results for real estate professionals across the country.
+            xBites is delivering measurable results for real estate professionals across the country.
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <MetricCard 
             icon={Users}
-            value={500}
+            value={2000}
             prefix="+"
-            label="Real Estate Teams"
+            label="Brokers"
           />
           
           <MetricCard 
             icon={MessagesSquare}
-            value={1500000}
+            value={100000}
             label="AI Interactions Monthly"
             highlight={true}
           />
@@ -142,9 +146,12 @@ const Metrics = () => {
         <div className="mt-20 max-w-3xl mx-auto bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 md:p-10 text-center">
           <h3 className="heading-md mb-6">Ready to experience these results?</h3>
           <p className="text-lg mb-8">
-            Join hundreds of successful real estate teams already using XBites.
+            Join leading brokerage firms leveraging xBites to streamline sales and maximize performance.
           </p>
-          <button className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-medium shadow-subtle transition-all hover:shadow-elevation">
+          <button 
+            className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-medium shadow-subtle transition-all hover:shadow-elevation"
+            onClick={handleGetStartedClick}
+          >
             Get Started Today
           </button>
         </div>

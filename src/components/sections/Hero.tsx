@@ -24,6 +24,10 @@ const Hero = () => {
     };
   }, []);
 
+  const handleCTAClick = () => {
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+  };
+
   return (
     <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
       {/* Background Elements */}
@@ -50,14 +54,14 @@ const Hero = () => {
           </h1>
           
           <p className="subheading mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: '0.1s' }}>
-            XBites automates hiring and provides instant knowledge support for real estate sales teams, saving time and boosting efficiency.
+            xBites provides a complete, end-to-end platform with AI agents that automate repetitive sales tasks, optimizing efficiency and enabling teams to focus on closing deals.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <CTAButton gradient size="lg" className="w-full sm:w-auto">
+            <CTAButton gradient size="lg" className="w-full sm:w-auto" onClick={handleCTAClick}>
               Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
             </CTAButton>
-            <CTAButton variant="outline" size="lg" className="w-full sm:w-auto">
+            <CTAButton variant="outline" size="lg" className="w-full sm:w-auto" onClick={handleCTAClick}>
               Try for Free
             </CTAButton>
           </div>
@@ -67,21 +71,8 @@ const Hero = () => {
               <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>No credit card required</span>
-            </div>
-            
-            <div className="hidden md:flex items-center">
-              <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>14-day free trial</span>
-            </div>
-            
-            <div className="hidden md:flex items-center">
-              <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>Cancel anytime</span>
+              <span>Backed up by</span>
+              <img src="/antler-logo.png" alt="Antler" className="h-6 ml-2" />
             </div>
           </div>
         </div>
@@ -97,10 +88,7 @@ const Hero = () => {
               </div>
             </div>
             <div className="aspect-video bg-gradient-to-b from-white to-secondary/30 flex items-center justify-center">
-              <div className="text-center">
-                <div className="font-display text-2xl font-bold mb-4">AI Dashboard Preview</div>
-                <p className="text-muted-foreground">Visualize your AI agents in action</p>
-              </div>
+              <img src="/dashboard-screenshot.png" alt="Dashboard Preview" className="w-full h-full object-cover" />
             </div>
           </div>
           

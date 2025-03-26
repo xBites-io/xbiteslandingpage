@@ -13,6 +13,10 @@ const ProductCard = ({
   isReversed = false,
   features = []
 }) => {
+  const handleLearnMoreClick = () => {
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+  };
+
   return (
     <div className={cn(
       "relative rounded-2xl overflow-hidden bg-white shadow-subtle transition-all duration-300 hover:shadow-elevation",
@@ -36,7 +40,7 @@ const ProductCard = ({
           ))}
         </ul>
         
-        <CTAButton variant="outline" className="mt-2">
+        <CTAButton variant="outline" className="mt-2" onClick={handleLearnMoreClick}>
           Learn More <ArrowRight className="ml-2 h-4 w-4" />
         </CTAButton>
       </div>
@@ -81,39 +85,33 @@ const ProductShowcase = () => {
         
         <div className="grid grid-cols-1 gap-12 max-w-5xl mx-auto">
           <ProductCard 
-            title="Nader - AI Interviewer"
-            description="Streamline your hiring process with an AI that pre-screens candidates and identifies top talent for your real estate team."
-            icon={Users}
-            color="bg-primary/10"
-            iconColor="text-primary"
-            features={[
-              "Conducts preliminary interviews 24/7",
-              "Assesses candidate fit based on custom criteria",
-              "Provides detailed candidate reports",
-              "Reduces hiring time by up to 70%"
-            ]}
-          />
-          
-          <ProductCard 
             title="Malek - AI Knowledge Assistant"
             description="Provide your real estate team with instant access to critical information and answers to boost sales performance."
             icon={Brain}
             color="bg-accent/10"
             iconColor="text-accent"
-            isReversed={true}
             features={[
-              "Answers complex real estate questions in seconds",
-              "Provides market data and trends analysis",
-              "Generates property descriptions and selling points",
-              "Accessible via chat, email, or mobile app"
+              "24/7 AI sales expert that empowers teams to sell like top performers",
+              "Instant answers to complex real estate questions in seconds",
+              "Seamless accessibility via chat, email, and WhatsApp",
+              "Smart automation for booking units, scheduling calls, and more"
             ]}
           />
-        </div>
-        
-        <div className="text-center mt-16">
-          <CTAButton gradient>
-            Explore All Features <ArrowRight className="ml-2 h-4 w-4" />
-          </CTAButton>
+          
+          <ProductCard 
+            title="Nader - AI Interviewer"
+            description="Streamline your hiring process with an AI that pre-screens candidates and identifies top talent for your real estate team."
+            icon={Users}
+            color="bg-primary/10"
+            iconColor="text-primary"
+            isReversed={true}
+            features={[
+              "Live, adaptive AI interviews in English & Arabic",
+              "Instant candidate evaluation with AI-powered insights",
+              "Cheat detection & smart scheduling for efficiency",
+              "One-click interview management, reducing hiring time by up to 70%"
+            ]}
+          />
         </div>
       </div>
     </section>

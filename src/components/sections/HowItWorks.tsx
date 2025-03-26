@@ -56,6 +56,10 @@ const Step = ({ number, title, description, icon: Icon, isLast = false }) => {
 };
 
 const HowItWorks = () => {
+  const handleSetupClick = () => {
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+  };
+
   return (
     <section id="how-it-works" className="section-padding bg-secondary/80">
       <div className="container mx-auto px-4">
@@ -63,7 +67,7 @@ const HowItWorks = () => {
           <span className="px-3 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-6 inline-block">
             Simple Process
           </span>
-          <h2 className="heading-lg mb-6">How XBites Works</h2>
+          <h2 className="heading-lg mb-6">How xBites Works</h2>
           <p className="subheading">
             Get your AI real estate crew up and running in three easy steps.
           </p>
@@ -95,7 +99,10 @@ const HowItWorks = () => {
           </div>
           
           <div className="mt-16 text-center">
-            <button className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-8 py-3 font-medium shadow-subtle transition-all hover:shadow-elevation hover:bg-primary/90">
+            <button 
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-8 py-3 font-medium shadow-subtle transition-all hover:shadow-elevation hover:bg-primary/90" 
+              onClick={handleSetupClick}
+            >
               <span>Start Your Setup</span>
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

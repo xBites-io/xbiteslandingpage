@@ -37,6 +37,10 @@ const Index = () => {
     };
   }, []);
 
+  const handleCTAClick = () => {
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -54,14 +58,20 @@ const Index = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="heading-lg mb-6">Ready to Transform Your Real Estate Business?</h2>
               <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-                Join hundreds of successful real estate teams already using XBites to automate hiring and empower their sales process.
+                Join leading brokerage firms leveraging xBites to streamline sales and maximize performance.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="w-full sm:w-auto px-8 py-3 bg-primary text-white rounded-full font-medium transition-all hover:bg-primary/90 hover:shadow-lg">
+                <button 
+                  className="w-full sm:w-auto px-8 py-3 bg-primary text-white rounded-full font-medium transition-all hover:bg-primary/90 hover:shadow-lg"
+                  onClick={handleCTAClick}
+                >
                   Book a Demo
                 </button>
-                <button className="w-full sm:w-auto px-8 py-3 bg-white text-foreground rounded-full font-medium transition-all hover:bg-secondary hover:shadow-lg">
+                <button 
+                  className="w-full sm:w-auto px-8 py-3 bg-white text-foreground rounded-full font-medium transition-all hover:bg-secondary hover:shadow-lg"
+                  onClick={handleCTAClick}
+                >
                   Try for Free
                 </button>
               </div>
