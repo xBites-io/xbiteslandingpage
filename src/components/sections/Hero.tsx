@@ -71,11 +71,11 @@ const Hero = () => {
               <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              <span>Backed up by</span>
+              <span>Backed by</span>
               <img 
                 src="/antler-logo.png" 
                 alt="Antler" 
-                className="h-6 ml-2" 
+                className="h-8 ml-2" 
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   console.error('Antler logo failed to load');
