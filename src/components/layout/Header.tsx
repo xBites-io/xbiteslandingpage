@@ -51,16 +51,10 @@ const Header = () => {
           <a href="#how-it-works" className="text-foreground/80 hover:text-foreground transition-colors">
             How It Works
           </a>
-          <a href="#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">
-            Testimonials
-          </a>
         </nav>
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="outline" className="rounded-full px-5" onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}>
-            Sign In
-          </Button>
           <Button 
             className="rounded-full px-5 bg-primary text-white hover:bg-primary/90"
             onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}
@@ -100,22 +94,8 @@ const Header = () => {
           >
             How It Works
           </a>
-          <a 
-            href="#testimonials" 
-            className="text-lg font-medium py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Testimonials
-          </a>
         </nav>
         <div className="mt-8 flex flex-col space-y-4">
-          <Button 
-            variant="outline" 
-            className="w-full rounded-full py-6"
-            onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}
-          >
-            Sign In
-          </Button>
           <Button 
             className="w-full rounded-full py-6 bg-primary text-white"
             onClick={() => window.open("https://calendly.com/khodier-mahmoud/30min", "_blank")}

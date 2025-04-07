@@ -13,7 +13,7 @@ const ProductCard = ({
   isReversed = false,
   features = []
 }) => {
-  const handleLearnMoreClick = () => {
+  const handleSignUpClick = () => {
     window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
   };
 
@@ -40,8 +40,8 @@ const ProductCard = ({
           ))}
         </ul>
         
-        <CTAButton variant="outline" className="mt-2" onClick={handleLearnMoreClick}>
-          Learn More <ArrowRight className="ml-2 h-4 w-4" />
+        <CTAButton variant="outline" className="mt-2" onClick={handleSignUpClick}>
+          Sign up <ArrowRight className="ml-2 h-4 w-4" />
         </CTAButton>
       </div>
       

@@ -6,7 +6,6 @@ import Hero from '@/components/sections/Hero';
 import ProductShowcase from '@/components/sections/ProductShowcase';
 import Metrics from '@/components/sections/Metrics';
 import HowItWorks from '@/components/sections/HowItWorks';
-import Testimonials from '@/components/sections/Testimonials';
 
 const Index = () => {
   useEffect(() => {
@@ -50,7 +49,6 @@ const Index = () => {
         <ProductShowcase />
         <Metrics />
         <HowItWorks />
-        <Testimonials />
         
         {/* Final CTA Section */}
         <section className="py-20 bg-primary/5 relative overflow-hidden">
