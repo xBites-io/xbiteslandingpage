@@ -14,7 +14,7 @@ const ProductCard = ({
   features = []
 }) => {
   const handleSignUpClick = () => {
-    window.open("https://xbites-talk-to-your-data-frontend.vercel.app/", "_blank");
+    window.open("https://x-bites-frontend.vercel.app/en/company/login?locale=en&mode=signup", "_blank");
   };
 
   return (
