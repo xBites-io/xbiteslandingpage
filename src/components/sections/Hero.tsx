@@ -27,6 +27,10 @@ const Hero = () => {
   const handleCTAClick = () => {
     window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
   };
+
+  const handleTryForFreeClick = () => {
+    window.open("https://x-bites-frontend.vercel.app/en/company/login", "_blank");
+  };
   
   return <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
       {/* Background Elements */}
@@ -61,7 +65,7 @@ const Hero = () => {
             <CTAButton gradient size="lg" className="w-full sm:w-auto" onClick={handleCTAClick}>
               Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
             </CTAButton>
-            <CTAButton variant="outline" size="lg" className="w-full sm:w-auto" onClick={handleCTAClick}>
+            <CTAButton variant="outline" size="lg" className="w-full sm:w-auto" onClick={handleTryForFreeClick}>
               Try for Free
             </CTAButton>
           </div>
