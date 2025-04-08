@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef } from 'react';
 import CTAButton from '../ui/CTAButton';
 import { ArrowRight } from 'lucide-react';
@@ -68,7 +69,7 @@ const Hero = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
               <span>Backed by</span>
-              <img src="/antler-logo.png" alt="Antler" className="h-8 ml-2" onError={e => {
+              <img src="/lovable-uploads/06508cb8-c1d6-478f-8b53-9e2fd99181b4.png" alt="Antler" className="h-8 ml-2" onError={e => {
               const target = e.target as HTMLImageElement;
               console.error('Antler logo failed to load');
               target.onerror = null;
