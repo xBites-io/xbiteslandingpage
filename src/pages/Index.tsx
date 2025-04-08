@@ -40,6 +40,10 @@ const Index = () => {
     window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
   };
 
+  const handleTryForFreeClick = () => {
+    window.open("https://xbites-talk-to-your-data-frontend.vercel.app/", "_blank");
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -68,7 +72,7 @@ const Index = () => {
                 </button>
                 <button 
                   className="w-full sm:w-auto px-8 py-3 bg-white text-foreground rounded-full font-medium transition-all hover:bg-secondary hover:shadow-lg"
-                  onClick={handleCTAClick}
+                  onClick={handleTryForFreeClick}
                 >
                   Try for Free
                 </button>
