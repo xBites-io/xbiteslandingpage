@@ -73,7 +73,7 @@ const Hero = () => {
               </svg>
               <span>Backed by</span>
               <img 
-                src="/antler-logo.png" 
+                src="/lovable-uploads/1ec5a6d0-cc6a-4dce-af04-0bc4dc05b3b1.png" 
                 alt="Antler" 
                 className="h-8 ml-2" 
                 onError={(e) => {
