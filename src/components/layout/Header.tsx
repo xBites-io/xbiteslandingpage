@@ -30,9 +30,9 @@ const Header = () => {
         <div className="flex items-center">
           <a href="/" className="flex items-center">
             <img 
-              src="/xbites-logo.png" 
+              src="/lovable-uploads/7b6666a9-bc42-45b3-b6f3-b41c408eace7.png" 
               alt="xBites Logo" 
-              className="h-10" 
+              className="h-12 w-auto" 
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 console.error('xBites logo failed to load');
