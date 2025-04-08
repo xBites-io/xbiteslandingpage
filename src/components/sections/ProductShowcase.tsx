@@ -11,10 +11,11 @@ const ProductCard = ({
   color = "bg-primary/10",
   iconColor = "text-primary",
   isReversed = false,
-  features = []
+  features = [],
+  signUpUrl = "https://calendly.com/khodier-mahmoud/30min"
 }) => {
   const handleSignUpClick = () => {
-    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+    window.open(signUpUrl, "_blank");
   };
 
   return (
@@ -90,6 +91,7 @@ const ProductShowcase = () => {
             icon={Brain}
             color="bg-accent/10"
             iconColor="text-accent"
+            signUpUrl="https://xbites-talk-to-your-data-frontend.vercel.app/"
             features={[
               "24/7 AI sales expert that empowers teams to sell like top performers",
               "Instant answers to complex real estate questions in seconds",
@@ -105,6 +107,7 @@ const ProductShowcase = () => {
             color="bg-primary/10"
             iconColor="text-primary"
             isReversed={true}
+            signUpUrl="https://x-bites-frontend.vercel.app/en/company/login?locale=en&mode=signup"
             features={[
               "Live, adaptive AI interviews in English & Arabic",
               "Instant candidate evaluation with AI-powered insights",
