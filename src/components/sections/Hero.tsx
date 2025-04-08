@@ -29,7 +29,7 @@ const Hero = () => {
   };
 
   const handleTryForFreeClick = () => {
-    window.open("https://x-bites-frontend.vercel.app/en/company/login", "_blank");
+    window.open("https://xbites-talk-to-your-data-frontend.vercel.app/", "_blank");
   };
   
   return <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
