@@ -57,7 +57,7 @@ const Step = ({ number, title, description, icon: Icon, isLast = false }) => {
 
 const HowItWorks = () => {
   const handleSetupClick = () => {
-    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
+    window.open("https://xbites-talk-to-your-data-frontend.vercel.app/", "_blank");
   };
 
   return (
