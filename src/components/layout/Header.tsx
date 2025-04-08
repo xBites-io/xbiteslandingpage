@@ -32,7 +32,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7b6666a9-bc42-45b3-b6f3-b41c408eace7.png" 
               alt="xBites Logo" 
-              className="h-12 w-auto" 
+              className="h-16 w-auto" 
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 console.error('xBites logo failed to load');
