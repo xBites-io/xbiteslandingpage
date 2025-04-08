@@ -21,7 +21,7 @@ const Header = () => {
             console.error('xBites logo failed to load');
             target.onerror = null;
             target.src = '/placeholder.svg';
-          }} src="/lovable-uploads/9220dc22-6e5a-4cbe-8a9e-0b5ba4ee9d63.png" className="object-fill" />
+          }} className="" src="/lovable-uploads/de727262-34d7-4ac2-a089-f4154fc7b906.png" />
           </a>
         </div>
 
