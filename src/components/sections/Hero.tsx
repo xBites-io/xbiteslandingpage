@@ -2,8 +2,10 @@
 import React, { useEffect, useRef } from 'react';
 import CTAButton from '../ui/CTAButton';
 import { ArrowRight } from 'lucide-react';
+
 const Hero = () => {
   const backgroundAnimation = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       const {
@@ -15,14 +17,17 @@ const Hero = () => {
       const yPos = (clientY / window.innerHeight - 0.5) * 20;
       backgroundAnimation.current.style.transform = `translate(${xPos}px, ${yPos}px)`;
     };
+    
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
+  
   const handleCTAClick = () => {
     window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
   };
+  
   return <section className="pt-32 pb-20 md:pt-40 md:pb-32 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -92,12 +97,17 @@ const Hero = () => {
               </div>
             </div>
             <div className="aspect-video bg-gradient-to-b from-white to-secondary/30 flex items-center justify-center">
-              <img alt="Dashboard Preview" className="w-full h-full object-cover" onError={e => {
-              const target = e.target as HTMLImageElement;
-              console.error('Dashboard screenshot failed to load');
-              target.onerror = null;
-              target.src = '/placeholder.svg';
-            }} src="/lovable-uploads/babd5b49-3bb3-4042-9b63-a5e4336b5906.png" />
+              <img 
+                alt="Dashboard Preview" 
+                className="w-full h-auto object-contain" 
+                onError={e => {
+                  const target = e.target as HTMLImageElement;
+                  console.error('Dashboard screenshot failed to load');
+                  target.onerror = null;
+                  target.src = '/placeholder.svg';
+                }} 
+                src="/lovable-uploads/babd5b49-3bb3-4042-9b63-a5e4336b5906.png" 
+              />
             </div>
           </div>
           
@@ -110,4 +120,5 @@ const Hero = () => {
       </div>
     </section>;
 };
+
 export default Hero;
