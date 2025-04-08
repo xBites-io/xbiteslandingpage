@@ -14,7 +14,7 @@ const ProductCard = ({
   features = []
 }) => {
   const handleSignUpClick = () => {
-    window.open("https://xbites-talk-to-your-data-frontend.vercel.app/", "_blank");
+    window.open("https://calendly.com/khodier-mahmoud/30min", "_blank");
   };
 
   return (
